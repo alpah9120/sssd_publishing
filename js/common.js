@@ -20,6 +20,8 @@
 
         this.setUserOS();
         this.setUserAgent();
+		this.setUserAgent();
+		
     }
 
     /** @function setUserOS
@@ -71,9 +73,26 @@
 			});
 		});
 	}
-	
+	Pages.prototype.initScrollBarPlugin = function(context) {
+        $.fn.scrollbar && $('.scrollable', context).scrollbar({
+            ignoreOverlay: false
+        });
+    }
+	Pages.prototype.initNotificationCenter = function() {
+        $('body').on('click', '.notification-list .dropdown-menu', function(event) {
+            event.stopPropagation();
+        });
+        $('body').on('click', '.toggle-more-details', function(event) {
+            var p = $(this).closest('.heading');
+            p.closest('.heading').children('.more-details').stop().slideToggle('fast', function() {
+                p.toggleClass('open');
+            });
+        });
+    }
 	Pages.prototype.init = function() {
         this.initSwitcheryPlugin();
+		this.initScrollBarPlugin();
+		this.initNotificationCenter();
     }
 
     $.Pages = new Pages();
@@ -197,3 +216,85 @@ $('.modal-show').click(function() {
 	var Target_modal = $(this).attr('href');
 	$(Target_modal).modal('show');
 });
+
+function _gnbMove($_depth1,$_depth2,$_depth3) {
+	if($_depth1 == 1) {
+		return;
+	} else if($_depth1 == 2) {
+		return;
+	} else if($_depth1 == 3) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			return;
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}
+	} else if($_depth1 == 4) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			return;
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}
+	} else if($_depth1 == 5) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			return;
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}		
+	} else if($_depth1 == 6) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			return;
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}		
+	} else if($_depth1 == 7) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			if($_depth3==1) {
+				return
+			}
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}		
+	} else if($_depth1 == 8) {
+		if($_depth2==1) {
+			return;
+		} else if($_depth2==2) {
+			return;
+		} else if($_depth2==3) {
+			return;
+		} else if($_depth2==4) {
+			return;
+		}		
+	} else if($_depth1 == 9) { /* 스타일가이드 */
+		if($_depth2==1) {
+			location.href="스타일가이드.html";
+		} else if($_depth2==2) {
+			location.href="갤러리.html";
+		} else if($_depth2==3) {
+			location.href="로그인.html";
+		} else if($_depth2==4) {
+			location.href="에러.html";
+		}
+	} else {
+		return;
+	}
+}

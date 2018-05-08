@@ -58,7 +58,7 @@
 		float:left;
 		&.notification {
 			position:relative;
-			a {
+			.header-icon {
 				color:#fff;
 				display:block;
 				height:36px;
@@ -66,15 +66,15 @@
 				font-size:20px;
 				padding:7px 0 0 8px;
 			}
-			span {
+			.count {
 				position:absolute;
 				top:3px;
-				right:14px;				
+				right:3px;
 				width:16px;
 				height:16px;
 				border-radius:50%;
-				background-color:#fff;
-				color:$color-primary;
+				background-color:$color-danger-dark;
+				color:#fff;
 				font-size:12px;
 				line-height:16px;
 				vertical-align: middle;
