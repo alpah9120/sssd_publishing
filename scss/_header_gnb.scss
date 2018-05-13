@@ -91,12 +91,15 @@
 				background-color:#fff;
 				border-radius:50%;
 				color:#fff;
+				overflow:hidden;
+				background-size:contain;
 				&.default {
 					background-image:url(../images/user_default.svg);
 					background-size:21px 20px;
 					background-position:center center;
 					background-repeat:no-repeat;
 				}
+				
 			}
 			.name {
 				display:block;
@@ -218,7 +221,6 @@
 						text-overflow: ellipsis;
 						display: block;
 						font-size:12px;
-						font-weight:bold;
 						transition: all .18s;
 						&:hover {
 							padding-left:4px;
@@ -325,7 +327,6 @@
 								overflow: hidden;
 								text-overflow: ellipsis;
 								font-size:12px;
-								font-weight:bold;
 								@include flexbox();
 								-webkit-box-pack: justify;
 								-webkit-justify-content: space-between;
@@ -382,8 +383,7 @@
 				}
 				&.active {
 					& > a {
-						color:$color-primary;
-						font-weight:bold;
+						color:$color-danger;
 					}
 					& > a:before {
 						height:4px;
@@ -396,7 +396,10 @@
 				}
 			}
 			li > a {
-				color: $color-menu-light;
+				color: $color-menu-light;				
+			}
+			li.active > a {
+				color: $color-danger !important;
 			}
 		}
 	}

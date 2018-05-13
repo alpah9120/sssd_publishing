@@ -278,7 +278,6 @@ input[type=radio]:checked + label:before{
 		vertical-align: middle;
 		padding-left: 6px;
 		cursor:pointer;
-		line-height:1.1em;
 	}
 
 	label::before {
@@ -288,7 +287,7 @@ input[type=radio]:checked + label:before{
 		width: 17px;
 		height: 17px;
 		left: 0;
-		top: 3px;
+		top: 1px;
 		border: 1px solid #cccccc;
 		border-radius: 3px;
 		background-color: #fff;
@@ -303,7 +302,7 @@ input[type=radio]:checked + label:before{
 		width: 16px;
 		height: 16px;
 		left: 0;
-		top: 3px;
+		top: -1px;
 		padding-left: 3px;
 		padding-top: 1px;
 		font-size: 11px;
@@ -498,7 +497,6 @@ input[type=checkbox]:checked + label{
         margin-bottom: 0;
     }
     & > div{
-        margin: 0;
         &:first-child{
             &.row > [class*='col-']{
                 &:first-child .form-group-default{
@@ -539,8 +537,10 @@ input[type=checkbox]:checked + label{
         &:not(:last-child).form-group-default{
             border-bottom-color: transparent;
         }
-
     }
+	.required:after {
+		top:10px;
+	}
 }
 
 /* Form Groups 
@@ -574,7 +574,7 @@ input[type=checkbox]:checked + label{
     width: 100%;
     @include transition(background-color .2s ease);
 	label {
-		font-size:10.5px;
+		font-size:12px;
 	}
     &.required:after {
         color: $color-danger;
@@ -668,7 +668,7 @@ input[type=checkbox]:checked + label{
         padding-top: 5px;
     }
     label {
-        margin: 0;
+        margin: 0 0 4px;
         display: block;
         opacity: 1;
         @include transition(opacity .2s ease);

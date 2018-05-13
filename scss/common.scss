@@ -30,6 +30,9 @@ $sides: (top, bottom, left, right);
 @import "tabs_accordian";
 @import "../css/pages-icons.css";
 
+html {
+	height:100%;
+}
 body {
 	height: 100%;
 	margin: 0;
@@ -93,7 +96,12 @@ h1.logo {
     }
 }
 #wrapper-contents {
-	padding:0 0 40px;
+	min-height:100%;
+	width:100%;
+	
+	margin-top:-125px;
+	margin-bottom:-100px;
+	padding:125px 0 140px;
 }
 #wrapper-footer {
 	background-color:$color-primary-darker;
