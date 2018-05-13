@@ -1217,11 +1217,9 @@ select::-ms-expand {
 --------------------------------------------------
 */
 .input-group-addon {
-  background: #f0f0f0;
-  border: 1px solid rgba(0, 0, 0, 0.07);
   color: rgba(98, 98, 98, 0.47);
   font-size: 14px;
-  padding: 7px 9px 5px;
+  padding: 4px 4px 5px;
   display: table-cell;
   border-radius: 3px; }
   .input-group-addon i {

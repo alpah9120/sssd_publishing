@@ -824,11 +824,9 @@ input[type=checkbox]:checked + label{
 --------------------------------------------------
 */
 .input-group-addon {
-	background: $color-master-lighter;
-    border: 1px solid $form-control-border-color;
     color: rgba($color-master, .47);
     font-size: 14px;
-    padding: 7px 9px 5px;
+    padding: 4px 4px 5px;
     display: table-cell;
     border-radius: 3px;
     i {

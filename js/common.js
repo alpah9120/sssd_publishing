@@ -216,6 +216,12 @@ $('.modal-show').click(function() {
 	var Target_modal = $(this).attr('href');
 	$(Target_modal).modal('show');
 });
+$('.disabled-click').click(function(e) { //td a클릭시 tr이벤트 disabled
+	if (!e) var e = window.event;                
+    e.cancelBubble = true;                       
+    if (e.stopPropagation) e.stopPropagation();  
+    console.log('td clicked');
+})
 
 function _gnbMove($_depth1,$_depth2,$_depth3) {
 	if($_depth1 == 1) {

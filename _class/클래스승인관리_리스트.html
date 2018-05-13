@@ -286,7 +286,7 @@
 				<li class="breadcrumb-item active">함께하기 관리</li>
 			</ol>
 			<div class="h2-container">
-				<h2>함께하기 관리</h2>
+				<h2>클래스 승인관리</h2>
 			</div>
 			<hr>
 			
@@ -332,15 +332,49 @@
 								</select>
 							</div>
 						</div>
-						<div class="col-sm-2">
-							<label for="select01">모집상태</label>
+						<div class="col-sm-1">
+							<label for="select01">공간</label>
 							<div class="select-wrapper">
 								<select class="form-control input-sm" id="select03">
-									<option value="00">승인상태 선택</option>
-									<option value="01">모집중</option>
-									<option value="02">매칭 대기</option>
-									<option value="03">모집 완료</option>
+									<option value="00">공방</option>
 								</select>
+							</div>
+						</div>
+						<div class="col-sm-1">
+							<label for="select01">기간형태</label>
+							<div class="select-wrapper">
+								<select class="form-control input-sm" id="select04">
+									<option value="00">원데이</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<label for="select01">가격정보</label>
+							<div class="input-group">
+								<input type="text" class="form-control input-sm" placeholder="From">
+								<div class="input-group-addon">-</div>
+								<input type="text" class="form-control input-sm" placeholder="to"> 
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<label for="select01">승인상태</label>
+							<div class="form-gorup m-t-5">
+								<div class="checkbox checkbox-inline">
+									<input type="checkbox">
+									<label>전체</label>
+								</div>
+								<div class="checkbox checkbox-inline">
+									<input type="checkbox">
+									<label>승인대기</label>
+								</div>
+								<div class="checkbox checkbox-inline">
+									<input type="checkbox">
+									<label>승인</label>
+								</div>
+								<div class="checkbox checkbox-inline">
+									<input type="checkbox">
+									<label>거부</label>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -382,7 +416,10 @@
 			</div>
 			<div class="row-md m-t-30">
 				<div class="col-md-6 m-b-5">
-					<a href="#account_add" class="btn btn-sm btn-default modal-show"><i class="xi-trash-o text-danger"></i> 선택 글 삭제</a>
+					<a href="javascript:;" class="btn btn-sm btn-default"><i class="xi-trash-o text-danger"></i> 선택 클래스 삭제</a>
+				</div>
+				<div class="col-md-6 m-b-5 text-right">
+					<a href="#class_add" class="btn btn-sm btn-default modal-show"><i class="xi-plus text-danger"></i> 클래스 추가/등록</a>
 				</div>
 			</div>
 			
@@ -526,7 +563,7 @@
 	</div>
 
 <!-- Modal center-scale -->
-<div class="modal fade center-scale" id="supporting_writer" tabindex="-1" role="dialog" aria-hidden="false">
+<div class="modal fade center-scale" id="class_add" tabindex="-1" role="dialog" aria-hidden="false">
 	<div class="modal-dialog">
 		<div class="modal-content-wrapper">
 			<div class="modal-content" style="width:880px">
@@ -534,7 +571,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 						<i class="pg-close"></i>
 					</button>
-					<h5>지원 작가 매칭</h5>
+					<h5>클래스 추가/등록</h5>
 				</div>
 				<div class="modal-body">
 					<table class="table">
