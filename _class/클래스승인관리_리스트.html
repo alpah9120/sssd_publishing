@@ -140,13 +140,13 @@
 					<li>
 						<a href="javascript:_gnbMove(2)"><span class="title">회원관리</span></a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="javascript:;">
 							<span class="title">클래스 관리</span>
 							<span class=" arrow"></span>
 						</a>
 						<ul>
-							<li>
+							<li class="active">
 								<a href="javascript:_gnbMove(3,1)">클래스 승인 관리</a>
 							</li>
 							<li>
@@ -171,13 +171,13 @@
 							</li>
 						</ul>
 					</li>
-					<li class="active">
+					<li>
 						<a href="javascript:;">
 							<span class="title">게시글 관리</span>
 							<span class=" arrow"></span>
 						</a>
 						<ul>
-							<li class="active">
+							<li>
 								<a href="javascript:_gnbMove(5,1)">함께하기 관리</a>
 							</li>
 							<li>
@@ -428,10 +428,19 @@
 				<colgroup>
 					<col style="width:2%">
 					<col style="width:2%">
-					<col>
-					<col>
+					<col style="width:6%">
+					<col style="width:8%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
 					<col>
 					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:8%">
 					<col style="width:6%">
 				</colgroup>
 				<thead>
@@ -443,6 +452,7 @@
 							</div>
 						</th>
 						<th>#</th>
+						<th>상품번호</th>
 						<th>시/도</th>
 						<th>시/군/구</th>
 						<th>동/면/읍</th>
@@ -454,19 +464,18 @@
 							카테고리<br>
 							<small class="hint-text">소분류</small>
 						</th>
-						<th>게시물 제목</th>
-						<th>
-							모집인원
-							<small class="hint-text">(총)</small>
-						</th>
+						<th>공간</th>
+						<th>클래스명</th>
+						<th>기간형태</th>
+						<th>금액</th>
 						<th>아이디</th>
 						<th>모집기간</th>
-						<th>지원작가</th>
-						<th>상태</th>
+						<th>모집인원<br><small class="hint-text">(최소/최대)</small></th>
+						<th>승인</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr onclick="location.href='함께하기_상세.html'">
+					<tr onclick="location.href='클래스승인관리_상세.html'">
 						<td class="disabled-click">
 							<div class="checkbox">
 								<input type="checkbox">
@@ -474,19 +483,22 @@
 							</div>
 						</td>
 						<td>10</td>
+						<td>SS2123</td>
 						<td>서울특별시</td>
 						<td>구로구</td>
 						<td>구로동</td>
 						<td>요리</td>
 						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
 						<td>리스트에 보여지는 타이틀</td>
-						<td>5 <small class="hint-text">(10)</small></td>
-						<td>asdf1234@gmail.com</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
 						<td>2018.03.01 ~ 2018.03.31</td>
-						<td class="disabled-click"><a href="#supporting_writer" class="text-underline text-danger modal-show">3</a></td>
+						<td>2/4</td>
 						<td><span class="label label-complete">완료</span></td>
 					</tr>
-					<tr onclick="location.href='함께하기_상세.html'">
+					<tr onclick="location.href='클래스승인관리_상세.html'">
 						<td class="disabled-click">
 							<div class="checkbox">
 								<input type="checkbox">
@@ -494,19 +506,22 @@
 							</div>
 						</td>
 						<td>9</td>
+						<td>SS2123</td>
 						<td>서울특별시</td>
 						<td>구로구</td>
 						<td>구로동</td>
 						<td>요리</td>
 						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
 						<td>리스트에 보여지는 타이틀</td>
-						<td>5 <small class="hint-text">(10)</small></td>
-						<td>asdf1234@gmail.com</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
 						<td>2018.03.01 ~ 2018.03.31</td>
-						<td class="disabled-click"><a href="#supporting_writer" class="text-underline text-danger modal-show">2</a></td>
-						<td><span class="label label-default">대기</span></td>
+						<td>2/4</td>
+						<td><span class="label label-complete">완료</span></td>
 					</tr>
-					<tr onclick="location.href='함께하기_상세.html'">
+					<tr onclick="location.href='클래스승인관리_상세.html'">
 						<td class="disabled-click">
 							<div class="checkbox">
 								<input type="checkbox">
@@ -514,17 +529,89 @@
 							</div>
 						</td>
 						<td>8</td>
+						<td>SS2123</td>
 						<td>서울특별시</td>
 						<td>구로구</td>
 						<td>구로동</td>
 						<td>요리</td>
 						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
 						<td>리스트에 보여지는 타이틀</td>
-						<td>5 <small class="hint-text">(10)</small></td>
-						<td>asdf1234@gmail.com</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
 						<td>2018.03.01 ~ 2018.03.31</td>
-						<td class="disabled-click"><a href="#supporting_writer" class="text-underline text-danger modal-show">1</a></td>
-						<td><span class="label label-success">모집중</span></td>
+						<td>2/4</td>
+						<td><span class="label label-complete">완료</span></td>
+					</tr>
+					<tr onclick="location.href='클래스승인관리_상세.html'">
+						<td class="disabled-click">
+							<div class="checkbox">
+								<input type="checkbox">
+								<label></label>
+							</div>
+						</td>
+						<td>7</td>
+						<td>SS2123</td>
+						<td>서울특별시</td>
+						<td>구로구</td>
+						<td>구로동</td>
+						<td>요리</td>
+						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
+						<td>2018.03.01 ~ 2018.03.31</td>
+						<td>2/4</td>
+						<td><span class="label label-complete">완료</span></td>
+					</tr>
+					<tr onclick="location.href='클래스승인관리_상세.html'">
+						<td class="disabled-click">
+							<div class="checkbox">
+								<input type="checkbox">
+								<label></label>
+							</div>
+						</td>
+						<td>6</td>
+						<td>SS2123</td>
+						<td>서울특별시</td>
+						<td>구로구</td>
+						<td>구로동</td>
+						<td>요리</td>
+						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
+						<td>2018.03.01 ~ 2018.03.31</td>
+						<td>2/4</td>
+						<td><span class="label label-complete">완료</span></td>
+					</tr>
+					<tr onclick="location.href='클래스승인관리_상세.html'">
+						<td class="disabled-click">
+							<div class="checkbox">
+								<input type="checkbox">
+								<label></label>
+							</div>
+						</td>
+						<td>5</td>
+						<td>SS2123</td>
+						<td>서울특별시</td>
+						<td>구로구</td>
+						<td>구로동</td>
+						<td>요리</td>
+						<td>제과</td>
+						<td><a href="#none" class="text-danger text-underline">공방</a></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>email@email.com</td>
+						<td>2018.03.01 ~ 2018.03.31</td>
+						<td>2/4</td>
+						<td><span class="label label-complete">완료</span></td>
 					</tr>
 				</tbody>
 			</table>

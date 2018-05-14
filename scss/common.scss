@@ -19,6 +19,7 @@ $sides: (top, bottom, left, right);
 @import "form_elements";
 @import "buttons";
 @import "cards";
+@import "gallery";
 @import "typography";
 @import "table";
 @import "pagination";
@@ -133,4 +134,20 @@ h1.logo {
 	padding:20px 0;
 }
 
-
+.calendar-header {
+	position:relative;
+	text-align:center;
+	font-size:16px;	
+	height:40px;
+	padding-top:4px;
+	.calendar-btn-prev {
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.calendar-btn-next {
+		position:absolute;
+		right:0;
+		top:0;
+	}
+}

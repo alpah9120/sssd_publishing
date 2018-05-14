@@ -66,6 +66,21 @@ $table-border-style01:1px solid #e7e6e5;
 	}
 	
 }
+.table-calendar {
+	@extend %default-tbl;
+	width:100%;
+	border-top:$table-border-style01;
+	th,td {
+		border-right:0 none;
+		height:50px;
+	}
+	td:last-child,th:last-child {
+	}
+	th {
+		background-color:#f7f6f5;
+	}
+	
+}
 tr.active {
 	th,td {
 		background:#e6f3ff !important;

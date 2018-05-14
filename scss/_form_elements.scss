@@ -59,7 +59,7 @@ input,
 button, 
 select, 
 textarea {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     line-height: 20px;
 }
@@ -1471,7 +1471,6 @@ https://github.com/timschlechter/bootstrap-tagsinput
     -ms-flex-flow: wrap;
     flex-flow: wrap;
     background-color: transparent;
-    border-bottom: 1px solid $form-control-border-color;
     border-radius: 4px;
     padding: 0;
     padding-top: 5px;
@@ -1491,7 +1490,6 @@ https://github.com/timschlechter/bootstrap-tagsinput
 	}
     .tag {
         padding: 3px 9px;
-        padding-right:6px;
         border-radius: 3px;
         line-height: 18px;
         margin: 5px;
