@@ -82,14 +82,5 @@ $(function() {
     });
 
 
-    $("#slider-margin").noUiSlider({
-        start: [20, 80],
-        margin: 30,
-        connect: true,
-        range: {
-            'min': 0,
-            'max': 100
-        }
-    });
 
 });

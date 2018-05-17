@@ -285,7 +285,7 @@
   }
 }
 
-@include generate-paddings-options(10);
+@include generate-paddings-options(20);
 
 /* Generic Margin Helpers
 ------------------------------------
@@ -295,22 +295,22 @@
     @for $i from $j through $n {
       $step : $i*5;
       .m-t-#{$step} {
-        margin-top: ($step*1px);
+        margin-top: ($step*1px) !important;
       }
       .m-r-#{$step} {
-        margin-right: ($step*1px);
+        margin-right: ($step*1px) !important;
       }
        .m-l-#{$step} {
-        margin-left: ($step*1px);
+        margin-left: ($step*1px) !important;
       }
        .m-b-#{$step} {
-        margin-bottom: ($step*1px);
+        margin-bottom: ($step*1px) !important;
       }
     }
   }
 }
 
-@include generate-margin-options(10);
+@include generate-margin-options(20);
 
 .full-height{
   height: 100% !important;

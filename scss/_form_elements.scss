@@ -59,7 +59,7 @@ input,
 button, 
 select, 
 textarea {
-    font-size: 13px;
+    font-size: inherit;
     font-weight: normal;
     line-height: 20px;
 }
@@ -70,11 +70,6 @@ input[type="checkbox"] {
     line-height: normal;
     cursor: pointer;
     @include box-sizing(border-box);
-}
-
-select[multiple], 
-select[size] {
-    height: auto !important;
 }
 
 input:focus,
@@ -275,7 +270,7 @@ input[type=radio]:checked + label:before{
 	padding-left:16px;
 	label {
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 		padding-left: 6px;
 		cursor:pointer;
 	}
@@ -302,7 +297,7 @@ input[type=radio]:checked + label:before{
 		width: 16px;
 		height: 16px;
 		left: 0;
-		top: -1px;
+		top: 0px;
 		padding-left: 3px;
 		padding-top: 1px;
 		font-size: 11px;
@@ -374,6 +369,7 @@ input[type=radio]:checked + label:before{
 		margin-top: 0;
 		display:inline-block;
 		margin-right:20px;
+		vertical-align:top;
 	}
 	&.checkbox-center {
 		display:block;
@@ -2180,4 +2176,14 @@ div.cs-skin-slide{
             display: block;
         }
     }
+}
+.form-btnbox {
+	@include flexbox();
+	.form-box {
+		width:100%;
+	}
+	.form-btn {
+		padding-left:5px;
+		flex:1;
+	}
 }

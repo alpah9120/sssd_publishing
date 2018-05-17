@@ -44,24 +44,19 @@ h6 {
 }
 h1 {
     font-size: 44px;
-    line-height: 55px;
     letter-spacing: -0.08px;
 }
 h2 {
     font-size: 30px;
-    line-height: 40px;
 }
 h3 {
     font-size: 26px;
-    line-height: 35px;
 }
 h4 {
     font-size: 20px;
-    line-height: 31.88px;
 }
 h5{
     font-size: 16px;
-    line-height: 25.88px;
 }
 h3 small, 
 h4 small, 
@@ -75,6 +70,14 @@ h4.block,
 h5.block, 
 h6.block {
     padding-bottom: 10px;
+}
+.header-wrapper {
+	position:relative;
+	.header-btn {
+		position:absolute;
+		top:1px;
+		right:1px;
+	}
 }
 /* Lins and Others
 ------------------------------------
@@ -569,6 +572,18 @@ hr{
 }
 .fs-16{
     font-size: 16px !important;
+}
+.fs-20{
+    font-size: 20px !important;
+}
+.fs-24{
+    font-size: 24px !important;
+}
+.fs-28{
+    font-size: 28px !important;
+}
+.fs-32{
+    font-size: 32px !important;
 }
 
 /* Line-heights

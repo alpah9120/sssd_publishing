@@ -285,7 +285,7 @@
   }
 }
 
-@include generate-paddings-options(10);
+@include generate-paddings-options(20);
 
 /* Generic Margin Helpers
 ------------------------------------
@@ -310,7 +310,7 @@
   }
 }
 
-@include generate-margin-options(10);
+@include generate-margin-options(20);
 
 .full-height{
   height: 100% !important;

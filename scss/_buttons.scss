@@ -24,8 +24,8 @@
   &:active:focus,
   &:active:hover,
   .show .dropdown-toggle#{&} {
-    background-color: mix($background-color, $color-black, $mix-percentage-dark);
-    border-color: mix($background-color, $color-black, $mix-percentage-dark);
+    background-color: mix($background-color, $color-black, $mix-percentage-darker);
+    border-color: mix($background-color, $color-black, $mix-percentage-darker);
     color:$text-color;
   }
   &.hover,
