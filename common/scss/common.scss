@@ -58,19 +58,19 @@ ul,ol,dl,dt,dd,li {
 	display:inline-block !important;
 }
 h1.logo {
-    width:200px;
+    width:172px;
     height:60px;
-    padding-top:19px;
+    padding-top:11px;
     background-color:$color-danger-darker;
     a {
         display:block;
         margin:0 auto;
-        width:132px;
-        height:21px;
+        width:116px;
+        height:41px;
         text-indent:-3000em;
         overflow:hidden;
         background-image:url(../image/logo_admin_sssd.svg);
-        background-size:132px 21px;
+        background-size:116px 41px;
     }
 }
 
@@ -149,5 +149,50 @@ h1.logo {
 		position:absolute;
 		right:0;
 		top:0;
+	}
+}
+.coupon-preview-wrap {
+	position:relative;
+	background-size:contain;
+	.coupon-preview-text01 {
+		position:absolute;
+		top:26px;
+		left:182px;
+		color:#fff;
+		font-size:20px;
+		font-weight:bold;
+	}
+	.coupon-preview-text02 {
+		position:absolute;
+		top:60px;
+		left:182px;
+		color:#fff;
+	}
+	.coupon-preview-text03 {
+		position:absolute;
+		top:118px;
+		left:182px;
+		color:rgba(255,255,255,0.7);
+		font-size:11px;
+	}
+	.coupon-preview-btn {
+		position:absolute;
+		right:36px;
+		top:50%;
+		margin-top:-53px;
+		width:106px;
+		height:106px;		
+		text-align:center;
+		border-radius:50%;
+		background:rgba(0,0,0,0.5);
+		a {
+			color:rgba(255,255,255,0.8);
+			display:block;
+			padding-top:24px;
+			font-size:12px;
+		}
+		i {
+			font-size:32px;
+		}
 	}
 }
