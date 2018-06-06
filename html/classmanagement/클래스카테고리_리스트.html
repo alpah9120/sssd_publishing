@@ -140,7 +140,7 @@
 					<li>
 						<a href="javascript:_gnbMove(2)"><span class="title">회원관리</span></a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="javascript:;">
 							<span class="title">클래스 관리</span>
 							<span class=" arrow"></span>
@@ -152,7 +152,7 @@
 							<li>
 								<a href="javascript:_gnbMove(3,2)">클래스 관리</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="javascript:_gnbMove(3,3)">클래스 카테고리</a>
 							</li>
 						</ul>
@@ -202,7 +202,7 @@
 							</li>
 						</ul>
 					</li>
-					<li class="active">
+					<li>
 						<a href="javascript:;">
 							<span class="title">관리</span>
 							<span class=" arrow"></span>
@@ -223,7 +223,7 @@
 							<li>
 								<a href="javascript:_gnbMove(7,3)">포인트 설정</a>
 							</li>
-							<li class="active">
+							<li>
 								<a href="javascript:_gnbMove(7,4)">포인트/추천인 관리</a>
 							</li>
 						</ul>
@@ -262,63 +262,48 @@
 		<div class="container">
 			<ol class="breadcrumb clearfix">
 				<li class="breadcrumb-item home"><a href="#">솜씨당관리자</a></li>
-				<li class="breadcrumb-item"><a href="#">관리</a></li>
-				<li class="breadcrumb-item active">포인트/추천인관리</li>
+				<li class="breadcrumb-item"><a href="#">클래스 관리</a></li>
+				<li class="breadcrumb-item active">클래스 카테고리</li>
 			</ol>
 			<div class="h2-container">
-				<h2>포인트/추천인관리</h2>
+				<h2>클래스 카테고리</h2>
 			</div>
 			<hr>
 			
 			<div class="card card-dashboard m-b-10">
 				<div class="card-block">
 					<div class="row-sm m-b-15">
-						<div class="col-sm-4">
-							<label for="calendar_start">기간검색</label>
-							<div class="input-daterange input-group" id="datepicker-range">
-								<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
-								<div class="input-group-addon">-</div>
-								<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<label>&nbsp;</label>
+						<div class="col-sm-8">
+							<label for="calendar_start">검색기준</label>
 							<div class="form-group">
-								<a href="javascript:;" class="btn btn-sm btn-primary">전체</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary">오늘</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary">1주일</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary">1개월</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary">3개월</a>
+								<div class="radio radio-inline">
+									<input type="radio" id="search_type01" name="search_type">
+									<label for="search_type01">노출순서</label>
+								</div>
+								<div class="radio radio-inline">
+									<input type="radio" id="search_type02" name="search_type">
+									<label for="search_type02">관련 클래스 수</label>
+								</div>
+								<div class="radio radio-inline">
+									<input type="radio" id="search_type03" name="search_type">
+									<label for="search_type03">관련 함께해요 수</label>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row-sm m-b-15">
 						<div class="col-sm-2">
-							<label for="select05">회원유형</label>
+							<label for="select05">정렬기준</label>
 							<div class="select-wrapper">
 								<select class="form-control input-sm" id="select05">
-									<option value="00">전체</option>
-									<option value="01">강사</option>
-									<option value="02">일반회원</option>
+									<option value="00">정렬 기준 선택</option>
+									<option value="01">오름차순</option>
+									<option value="02">내림차순</option>
 								</select>
 							</div>
 						</div>
-						<div class="col-sm-2">
-							<label for="select06">분류</label>
-							<div class="select-wrapper">
-								<select class="form-control input-sm" id="select06">
-									<option value="00">전체</option>
-									<option value="01">회원가입</option>
-									<option value="02">친구추천</option>
-									<option value="03">결제</option>
-									<option value="04">후기</option>
-									<option value="05">커뮤니티출첵</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-sm-6">							
-							<label for="">아이디 검색</label>
-							<input type="text" class="form-control input-sm" placeholder="아이디, 제목을 입력해 주세요.">
+						<div class="col-sm-6 m-t-20">
+							<input type="text" class="form-control input-sm" placeholder="카테고리명, 관리번호를 입력해주세요.">
 							
 						</div>
 					</div>
@@ -329,21 +314,26 @@
 					</div>
 				</div>
 			</div>
+			<div class="row-md m-t-30">
+				<div class="col-md-6 m-b-5">
+					<a href="javascript:;" class="btn btn-sm btn-default"><i class="xi-trash-o text-danger"></i> 선택 삭제</a>
+				</div>
+				<div class="col-md-6 m-b-5 text-right">
+					<label for="new_category" class="m-r-5">새 카테고리</label>
+					<input type="text" class="form-control input-sm inline-block w-200" placeholder="신규 카테고리 명" id="new_category">
+					<a href="#class_add" class="btn btn-sm btn-primary modal-show"><i class="xi-plus"></i> 만들기</a>
+				</div>
+			</div>
 			<!-- Table -->
-			<table class="table m-t-20">
+			<table class="table">
 				<colgroup>
-					<col style="width:4%">
-					<col style="width:5%">
-					<col style="width:7%">
+					<col style="width:6%">
+					<col style="width:8%">
 					<col>
+					<col style="width:12%">
+					<col style="width:12%">
 					<col style="width:11%">
-					<col style="width:8%">
-					<col style="width:8%">
-					<col style="width:8%">
-					<col style="width:11%">
-					<col style="width:8%">
-					<col style="width:10%">
-					<col style="width:8%">
+					<col style="width:14%">
 				</colgroup>
 				<thead>
 					<tr>
@@ -353,17 +343,12 @@
 								<label></label>
 							</div>
 						</th>
-						<th>#</th>
-						<th>회원유형</th>
-						<th>닉네임</th>
-						<th>아이디</th>
-						<th>가입일자</th>
-						<th>적립일자</th>
-						<th>분류</th>
-						<th>추천 아이디</th>
-						<th>적립 포인트</th>
-						<th>누적 사용포인트</th>
-						<th>누적 포인트</th>
+						<th>노출순서</th>
+						<th>카테고리명</th>
+						<th>관련 클래스</th>
+						<th>관련 함께해요</th>
+						<th>관리번호</th>
+						<th>편집</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -374,17 +359,17 @@
 								<label></label>
 							</div>
 						</td>
-						<td>10</td>
-						<td><span class="label label-info">공방운영</span></td>
-						<td>라이언</td>
-						<td><a href="javascript:;" class="text-danger text-underline">toal</a></td>
-						<td>2018-11-21</td>
-						<td>2018-11-30</td>
-						<td>친구추천</td>
-						<td><a href="javascript:;" class="text-danger text-underline">tjsal1342</a></td>
-						<td>5,000p</td>
-						<td>23,000p</td>
-						<td>50,300p</td>
+						<td>
+							1
+						</td>
+						<td class="text-left">카테고리명</td>
+						<td>245,123</td>
+						<td>1,580</td>
+						<td>
+							고유번호<br>
+							<span class="hint-text">(관리자용)</span>
+						</td>
+						<td><a href="" class="btn btn-xs btn-primary"><i class="xi-cog"></i> 편집</a></td>
 					</tr>
 					<tr>
 						<td>
@@ -393,55 +378,22 @@
 								<label></label>
 							</div>
 						</td>
-						<td>10</td>
-						<td><span class="label label-default">일반회원</span></td>
-						<td>라이언</td>
-						<td><a href="javascript:;" class="text-danger text-underline">toal</a></td>
-						<td>2018-11-21</td>
-						<td>2018-11-30</td>
-						<td>친구추천</td>
-						<td><a href="javascript:;" class="text-danger text-underline">tjsal1342</a></td>
-						<td>5,000p</td>
-						<td>23,000p</td>
-						<td>50,300p</td>
-					</tr>
-					<tr>
 						<td>
-							<div class="checkbox checkbox-center">
-								<input type="checkbox">
-								<label></label>
-							</div>
+							<input type="text" class="form-control input-sm text-center" value="1">
 						</td>
-						<td>10</td>
-						<td><span class="label label-primary">강사</span></td>
-						<td>라이언</td>
-						<td><a href="javascript:;" class="text-danger text-underline">toal</a></td>
-						<td>2018-11-21</td>
-						<td>2018-11-30</td>
-						<td>친구추천</td>
-						<td><a href="javascript:;" class="text-danger text-underline">tjsal1342</a></td>
-						<td>5,000p</td>
-						<td>23,000p</td>
-						<td>50,300p</td>
-					</tr>
-					<tr>
+						<td class="text-left">
+							<input type="text" class="form-control input-sm" value="카테고리명">
+						</td>
+						<td>245,123</td>
+						<td>1,580</td>
 						<td>
-							<div class="checkbox checkbox-center">
-								<input type="checkbox">
-								<label></label>
-							</div>
+							고유번호<br>
+							<span class="hint-text">(관리자용)</span>
 						</td>
-						<td>10</td>
-						<td><span class="label label-danger">관리자</span></td>
-						<td>라이언</td>
-						<td><a href="javascript:;" class="text-danger text-underline">toal</a></td>
-						<td>2018-11-21</td>
-						<td>2018-11-30</td>
-						<td>친구추천</td>
-						<td><a href="javascript:;" class="text-danger text-underline">tjsal1342</a></td>
-						<td>5,000p</td>
-						<td>23,000p</td>
-						<td>50,300p</td>
+						<td>
+							<a href="" class="btn btn-xs btn-danger"><i class="xi-check"></i> 수정완료</a>
+							<a href="" class="btn btn-xs btn-default"><i class="xi-check"></i> 취소</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>

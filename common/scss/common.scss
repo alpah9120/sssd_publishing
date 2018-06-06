@@ -29,6 +29,7 @@ $sides: (top, bottom, left, right);
 @import "misc";
 @import "notifications";
 @import "tabs_accordian";
+@import "login";
 @import "../css/pages-icons.css";
 
 html {
@@ -180,16 +181,21 @@ h1.logo {
 		right:36px;
 		top:50%;
 		margin-top:-53px;
-		width:106px;
-		height:106px;		
-		text-align:center;
-		border-radius:50%;
-		background:rgba(0,0,0,0.5);
+		
 		a {
+			width:106px;
+			height:106px;		
+			text-align:center;
+			border-radius:50%;
+			background:rgba(0,0,0,0.5);
 			color:rgba(255,255,255,0.8);
 			display:block;
-			padding-top:24px;
+			padding:27px 0;
 			font-size:12px;
+			transition:all 0.3s;
+			&:hover,&:focus {
+				background:rgba(0,0,0,0.6);
+			}
 		}
 		i {
 			font-size:32px;
